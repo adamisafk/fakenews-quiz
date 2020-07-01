@@ -1,0 +1,7 @@
+
+Blocked by X-Frame-Options Policy error from iFrame
+    
+Add animations
+Centre fake news button
+    
+Figure out how to have two pages with the tabs and use it to show gossipcop data

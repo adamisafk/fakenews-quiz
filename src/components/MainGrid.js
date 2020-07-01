@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, TextareaAutosize, Paper, Snackbar } from '@material-ui/core';
+import { Grid, Paper, Snackbar } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert'
 
 import RecipeReviewCard from '../components/RecipeReviewCard';
@@ -100,6 +100,7 @@ class MainGrid extends Component {
                     <Grid item xs={6} style={{}}>
                         <RecipeReviewCard 
                         title={this.state.rng === 1 ? this.state.realDataTitle : this.state.fakeDataTitle}
+                        url={this.state.rng === 1 ? this.state.realDataLink : this.state.fakeDataLink}
                         isFake={this.state.rng === 1 ? false : true}
                         onAnswer={this.onFakeButtonPress.bind(this)}
                         />
@@ -107,6 +108,7 @@ class MainGrid extends Component {
                     <Grid item xs={6} style={{}} >
                         <RecipeReviewCard 
                         title={this.state.rng === 1 ? this.state.fakeDataTitle : this.state.realDataTitle}
+                        url={this.state.rng === 1 ? this.state.fakeDataLink : this.state.realDataLink}
                         isFake={this.state.rng === 1 ? true : false}
                         onAnswer={this.onFakeButtonPress.bind(this)}
                         />

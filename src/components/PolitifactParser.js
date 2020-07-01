@@ -1,5 +1,5 @@
 // Core
-import React, { Component } from 'react';
+import React from 'react';
 
 // Data sets
 let politifactReal = require('../data/politifact/politifact_real.json')
