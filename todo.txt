@@ -1,5 +1,6 @@
 
 Blocked by X-Frame-Options Policy error from iFrame
+Fix site width which causes a horizontal scrollbar
     
 Add animations
 Centre fake news button
