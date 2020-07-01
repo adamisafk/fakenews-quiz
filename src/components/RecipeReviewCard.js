@@ -16,6 +16,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { findByLabelText } from '@testing-library/react';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -42,13 +43,17 @@ const useStyles = makeStyles((theme) =>
   }),
 );
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  const onFakeClick = () => {
+    props.onAnswer(props.isFake)
+  }
 
   return (
     <Card className={classes.root}>
@@ -63,8 +68,8 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={props.title}
+        subheader={props.isFake === true ? "Fake" : "Real"}
       />
       <CardMedia
         className={classes.media}
@@ -78,6 +83,9 @@ export default function RecipeReviewCard() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
+
+        <Button onClick={onFakeClick}>FAKE!</Button>
+
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>

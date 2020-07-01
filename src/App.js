@@ -4,12 +4,10 @@ import './App.css';
 
 import SiteLayout from './containers/SiteLayout';
 import {  } from '@material-ui/core';
-import PolitifactParser from './components/PolitifactParser';
 
 function App() {
   return (
     <div className="App">
-      <PolitifactParser/>
       <SiteLayout>
         
       </SiteLayout>
